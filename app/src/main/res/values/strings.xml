@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">counter</string>
+    <string name="counter">0</string>
+    <string name="button_increment">Increment</string>
+    <string name="button_decrement">Decrement</string>
+    <string name="button_reset">Reset</string>
 </resources>
