@@ -1,7 +1,9 @@
 package com.example.counter;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -13,6 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     private int counter = 0;
+    public static final String EXTRA_MESSAGE = "com.example.counter.EXTRA_MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,5 +48,13 @@ public class MainActivity extends AppCompatActivity {
     public void reset(View view) {
         counter = 0;
         setViewText();
+    }
+
+    public void setCounter(View view){
+        Intent intent = new Intent(this, DisplayCounter.class);
+        EditText editCounter = findViewById(R.id.counter_value);
+        String counter = editCounter.getText().toString();
+        intent.putExtra(EXTRA_MESSAGE, counter);
+        startActivity(intent);
     }
 }

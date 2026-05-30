@@ -4,4 +4,8 @@
     <string name="button_increment">Increment</string>
     <string name="button_decrement">Decrement</string>
     <string name="button_reset">Reset</string>
+    <string name="button_set">Set</string>
+
+
+
 </resources>
